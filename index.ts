@@ -1,7 +1,7 @@
 const server = Bun.serve({
-    port: 5000, 
+    port: Bun.env.PORT || 5000, 
     fetch(req) {
-        return new Response('Hello World');
+        return new Response('Hello Bun!');
     }
 })
 
